@@ -39,10 +39,11 @@ h2 {
 
 p, li {
   line-height: 1.5;
+  margin: 1rem 0;
 }
 
 .wrapper {
-  max-width: 1280px;
+  max-width: 960px;
   display: grid;
   row-gap: 2rem;
   grid-template-rows: auto 1fr auto;
