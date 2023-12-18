@@ -30,16 +30,24 @@ h1 {
 
 h2 {
   font-size: 2rem;
-  /* border-block-end: 2px solid black;
-  display: inline-block; */
   text-decoration: underline;
   text-decoration-thickness: 0.15rem;
   text-underline-offset: 0.5rem;
+  margin-block-start: 3rem;
 }
 
 p, li {
   line-height: 1.5;
-  margin: 1rem 0;
+  margin: 1.5rem 0;
+}
+
+figure {
+  text-align: center;
+}
+
+.pixel {
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
 }
 
 .wrapper {
@@ -72,4 +80,24 @@ p, li {
 .todo li::marker {
   content: "✔ ";
   font-size: 1.25rem;
+}
+
+.gallery {
+  --image-size: 256px;
+  list-style-type: none;
+  padding-inline-start: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--image-size), 1fr));
+  place-items: center;
+  gap: 1rem;
+}
+
+.gallery li {
+  max-width: var(--image-size);
+}
+
+.gallery figure {
+  width: var(--image-size);
+  margin: 0;
+  padding: 0;
 }
