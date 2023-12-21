@@ -51,7 +51,7 @@ figure {
 }
 
 .wrapper {
-  max-width: 960px;
+  max-width: 62rem;
   display: grid;
   row-gap: 2rem;
   grid-template-rows: auto 1fr auto;
@@ -83,7 +83,7 @@ figure {
 }
 
 .gallery {
-  --image-size: 256px;
+  --image-size: 320px;
   list-style-type: none;
   padding-inline-start: 0;
   display: grid;
@@ -96,8 +96,22 @@ figure {
   max-width: var(--image-size);
 }
 
+@media (min-width: 62rem  ) {
+  .gallery li.wide {
+    --image-size: 640px;
+    grid-column: span 2;
+  }
+  .gallery li.wide img {
+    width: 100%;
+  }
+}
+
 .gallery figure {
   width: var(--image-size);
   margin: 0;
   padding: 0;
+}
+
+.gallery img {
+  max-width: 100%;
 }
