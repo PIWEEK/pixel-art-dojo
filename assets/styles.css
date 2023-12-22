@@ -98,10 +98,17 @@ figure {
 
 @media (min-width: 62rem  ) {
   .gallery li.wide {
-    --image-size: 640px;
+    --image-size: calc(320px * 2 + 1rem);
     grid-column: span 2;
   }
-  .gallery li.wide img {
+
+  .gallery li.ultra-wide {
+    --image-size: calc(320px * 3 + 2rem);
+    grid-column: span 3;
+  }
+
+  .gallery li.wide img,
+  .gallery li.ultra-wide img {
     width: 100%;
   }
 }
